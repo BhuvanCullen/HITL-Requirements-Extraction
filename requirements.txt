@@ -1,0 +1,9 @@
+!pip install pdfminer.six
+
+import re
+import os
+import pandas as pd
+import numpy as np
+from typing import List
+import matplotlib.pyplot as plt
+plt.style.use('seaborn-v0_8')
