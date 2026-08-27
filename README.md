@@ -1,19 +1,29 @@
-# HITL Requirements Extraction Pipeline
+# Automated Requirements Traceability & Classification Pipeline
 
-Automated extraction + ML classification of engineering requirements from PDF documents with human in the loop(HITL) validation.
+[![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-## 📋 Quick Start
+A robust machine learning and rule-based pipeline designed to extract, classify, and map system requirements across abstraction levels (L1–L4) to ensure structural continuity and minimize scope drift.
 
-```bash
-# Clone repo
-git clone https://github.com/BhuvanCullen/HITL-Requirements-Extraction.git
-cd HITL-Requirements-Extraction
+---
 
-# Install dependencies
-pip install -r requirements.txt
+## Project Overview
+Managing requirements manually across large-scale technical specifications is prone to human error, information loss, and traceability gaps. This repository contains the source code and evaluation scripts for an automated requirements engineering workflow that combines:
+* **Rule-Based Heuristics:** Regular expression parsing and pattern matching for structured extraction.
+* **Supervised Machine Learning:** Comparative evaluation of classifiers (SVM, Random Forests, Decision Trees) and vectorization techniques (TF-IDF/BoW) for automated requirement categorization.
+* **Traceability Mapping:** Maintaining structural linkages from high-level objectives down to granular engineering specifications.
 
-# Run main pipeline
-jupyter notebook Final main code.ipynb
+---
 
-#important
-The code in cell-4 of the Jupyter Notebook "Final main code.ipynb" only works on the PDF I have attached, as it was named in the cell-4 code. If you need to test the code on any other pdfs please change the title of the document accordingly.
+## Repository Structure
+```text
+├── data/                  # Input datasets and raw requirements documents
+├── src/
+│   ├── extraction/        # Rule-based parsing and RegEx extraction scripts
+│   ├── preprocessing/     # Text cleaning, tokenization, and vectorization (TF-IDF)
+│   ├── models/            # Training and evaluation scripts (SVM, RF, Decision Trees)
+│   └── traceability/      # Requirement mapping and linking logic
+├── notebooks/             # Exploratory data analysis and model prototyping
+├── outputs/               # Generated reports, evaluation matrices, and exported links
+├── requirements.txt       # Project dependencies
+└── README.md
