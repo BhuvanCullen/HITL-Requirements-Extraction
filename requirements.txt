@@ -1,4 +1,7 @@
-!pip install pdfminer.six
+!pip install pdfminer.six    
+!pip install python-docx    
+!pip install openpyxl        
+!pip install pandas 
 
 import re
 import os
@@ -6,4 +9,5 @@ import pandas as pd
 import numpy as np
 from typing import List
 import matplotlib.pyplot as plt
+import docx
 plt.style.use('seaborn-v0_8')
